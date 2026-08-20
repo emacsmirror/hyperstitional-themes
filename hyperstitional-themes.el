@@ -6,7 +6,7 @@
 ;; URL: https://github.com/precompute/hyperstitional-themes
 ;; Created: April 16, 2024
 ;; Modified: August 20, 2026
-;; Version: 3.7
+;; Version: 3.8
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -489,6 +489,15 @@ Returns a color in hex as a string."
      `(which-key-command-description-face ((,class (:foreground ,c5 :background ,c3-light))))
      `(which-key-separator-face ((,class (:foreground ,c1 :background ,bg))))
 
+;;;;;; tab-bar
+     `(tab-bar               ((,class (:foreground ,fg :background ,bg :underline ,c0))))
+     `(tab-bar-tab           ((,class (:foreground ,c6 :underline ,c0))))
+     `(tab-bar-tab-inactive  ((,class (:foreground ,c4 :underline ,c0))))
+     `(tab-bar-tab-highlight ((,class (:foreground ,c2))))
+     `(tab-bar-tab-ungrouped      ((,class (:foreground ,c1-dim))))
+     `(tab-bar-tab-group-current  ((,class (:foreground ,c3-dim))))
+     `(tab-bar-tab-group-inactive ((,class (:foreground ,c5-dim))))
+
 ;;;;;; company
      `(company-tooltip-selection  ((,class (:foreground ,fg :underline (:color ,c2-dim) :inherit bold))))
      `(company-tooltip-common     ((,class (:foreground ,fg))))
@@ -644,12 +653,6 @@ Returns a color in hex as a string."
      `(tree-sitter-hl-face:variable.builtin   ((,class (:foreground ,c3-dim))))
      `(tree-sitter-hl-face:variable.parameter ((,class (:foreground ,c3-dark))))
      `(tree-sitter-hl-face:variable.special   ((,class (:foreground ,c3-dim))))
-
-;;;;;; tabs
-     `(tab-line                   ((,class (:inherit mode-line))))
-     `(tab-bar                    ((,class (:inherit mode-line))))
-     `(tab-bar-tab                ((,class (:inherit mode-line))))
-     `(tab-bar-tab-inactive       ((,class (:inherit mode-line))))
 
 ;;;;;; highlight-indent-guides
      `(highlight-indent-guides-odd-face             ((,class (:foreground ,c0-dim))))
@@ -887,12 +890,6 @@ Returns a color in hex as a string."
      `(header-line           ((,class (:inherit mode-line))))
      `(header-line-inactive  ((,class (:inherit mode-line-inactive))))
      `(header-line-highlight ((,class (:inherit mode-line-highlight))))
-
-;;;;;; tabs
-     `(tab-line                   ((,class (:inherit mode-line))))
-     `(tab-bar                    ((,class (:inherit mode-line))))
-     `(tab-bar-tab                ((,class (:inherit mode-line))))
-     `(tab-bar-tab-inactive       ((,class (:inherit mode-line-inactive))))
 
 ;;;;;; Info mode
      `(info-quoted       ((,class (:foreground ,ga :background ,gf :inherit fixed-pitch))))
@@ -1161,6 +1158,15 @@ Returns a color in hex as a string."
      `(which-key-group-description-face ((,class (:foreground ,ra :weight bold))))
      `(which-key-command-description-face ((,class (:foreground ,ba :slant italic))))
      `(which-key-separator-face ((,class (:foreground ,ww :background ,ww))))
+
+;;;;;; tab-bar
+     `(tab-bar               ((,class (:foreground ,wg :background ,ww :underline ,ra))))
+     `(tab-bar-tab           ((,class (:foreground ,ga :underline ,ra))))
+     `(tab-bar-tab-inactive  ((,class (:foreground ,ba :underline ,ra))))
+     `(tab-bar-tab-highlight ((,class (:foreground ,gd))))
+     `(tab-bar-tab-ungrouped      ((,class (:foreground ,rd))))
+     `(tab-bar-tab-group-current  ((,class (:foreground ,gd))))
+     `(tab-bar-tab-group-inactive ((,class (:foreground ,bd))))
 
 ;;;;;; message
      `(message-header-name    ((,class (:foreground ,bb :inherit variable-pitch))))
