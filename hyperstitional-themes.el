@@ -5,8 +5,8 @@
 ;; Author: precompute <git@precompute.net>
 ;; URL: https://github.com/precompute/hyperstitional-themes
 ;; Created: April 16, 2024
-;; Modified: August 20, 2026
-;; Version: 3.8
+;; Modified: September 07, 2026
+;; Version: 3.9
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -442,6 +442,11 @@ Returns a color in hex as a string."
      `(show-paren-match            ((,class (:underline (:color ,c4-dim :line-width -1)))))
      `(show-paren-mismatch         ((,class (:underline (:color ,c6-dark :line-width -1)))))
      `(show-paren-match-expression ((,class (:background ,c6-light))))
+
+;;;;;; completion preview
+     `(completion-preview           ((,class (:inherit italic :foreground ,bg :background ,c6))))
+     `(completion-preview-common    ((,class (:inherit completion-preview :background ,c3))))
+     `(completion-preview-exact     ((,class (:inherit completion-preview-common :background ,c0))))
 
 ;;;;;; Whitespace Mode
      `(whitespace-tab                    ((,class (:background ,bg :foreground ,c0))))
@@ -1113,6 +1118,11 @@ Returns a color in hex as a string."
      `(show-paren-match            ((,class (:underline (:color ,gc :postion 0 :style dashes)))))
      `(show-paren-mismatch         ((,class (:underline (:color ,rc :postion 0 :style dashes)))))
      `(show-paren-match-expression ((,class (:inherit show-paren-match))))
+
+;;;;;; completion preview
+     `(completion-preview           ((,class (:inherit italic :foreground ,wc :box (:color ,ba :line-width -1)))))
+     `(completion-preview-common    ((,class (:inherit completion-preview :box (:color ,ra :line-width -1)))))
+     `(completion-preview-exact     ((,class (:inherit completion-preview-common :box (:color ,ga :line-width -1)))))
 
 ;;;;;; Whitespace Mode
      `(whitespace-tab                    ((,class (:background ,ww :foreground ,wb))))
